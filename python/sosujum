@@ -6,11 +6,11 @@ def main():
 
     string3 = "{0} {1} {2}".format(10, 999, 6694)
     print(string3)
-    string4 = "{0:d} {1:5d} {2:05d}".format(10, 999, 6694)
+    string4 = "{0:d} {1:5d} {2:05d}".format(10, 999, 4)
     print(string4)
     string5 = "{0:+.2f} {1:+.2f} {2:+.2f}".format(10.5, 999.7, 6694.9)
     print(string5)
-    string6 = "하하핳 {0:+f}".format(99999999999999.99999999999999)
+    string6 = "하하핳 {0:+.2f}".format(909.966)
     print(string6)
 if __name__=="__main__":
         main()
