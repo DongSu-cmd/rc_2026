@@ -29,3 +29,4 @@ def main():
                 json.dump(dict_a, f, ensure_ascii=False, indent=4)
     if __name__=="__main__":
             main()
+            print("저장 완료")

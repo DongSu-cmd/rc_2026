@@ -1,7 +1,7 @@
 def main():
         
         print(range(10))
-        print(range(1,10,0))
+        print(range(1,10,1))
         a = range(10)
         print(list(a))
         print(range(5,3,10))
@@ -17,7 +17,7 @@ def main():
         list_c = ["에이", "비", "씨"]
         for i in range(3):
                 print(list_b[i], list_c[i])
-        for b, c in zip(list_b, list_c):
+        for b, c in zip(list_b, list_c):                                #()생략
                 print(b, c)
 
 if __name__=="__main__":

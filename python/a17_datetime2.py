@@ -1,8 +1,8 @@
 def main():
         import datetime
 
-        from a15_comparison_operator import main as comparison_main
-        comparison_main()
+       # from a15_comparison_operator import main as comparison_main
+      #  comparison_main()
 
         now = datetime.datetime.now()
         print(now)

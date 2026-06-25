@@ -23,4 +23,18 @@ print 및 in사용, def, class와 변수 및 함수구별
 ---
 
 2주차
-논리연산자 사용, if문 사용, 숫자비교, 날짜출력, append, insert, del, pop, for
+논리연산자 사용, if문 사용, 숫자비교, 
+날짜출력, append, insert, 
+del, pop, for
+
+---
+
+2026-06-24
+
+---
+
+3주차
+while 반복문: break 키워드/continue 키워드, 
+튜플, 기본매개변수, argument, 재귀함수, 메모, 
+람다, open, with open, generator
+time decorator, 예외
