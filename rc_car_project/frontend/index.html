@@ -2,41 +2,67 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>RC Car Controller</title>
+
     <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
 
-<img src="car.png" id="car" alt="RC Car">
+    <!-- 자동차 -->
+    <img id="car" src="car.png" alt="RC Car">
 
-<div class="container">
+    <!-- 컨트롤 패널 -->
+    <div class="container">
 
-    <h1>RC Car Controller</h1>
+        <h1>RC Car Controller</h1>
 
-    <div class="status">
-        <p>Battery : <span id="battery">100</span>%</p>
-        <p>Distance : <span id="distance">0.0</span> m</p>
-    </div>
+        <div class="status">
 
-    <div class="controls">
+            <p>
+                Battery :
+                <span id="battery">100</span>%
+            </p>
 
-        <button id="forward">▲</button>
+            <p>
+                Distance :
+                <span id="distance">0.0</span> m
+            </p>
 
-        <div class="middle">
-            <button id="left">◀</button>
-            <button id="right">▶</button>
         </div>
 
-        <button id="backward">▼</button>
+        <div class="controls">
+
+            <button id="forward">▲</button>
+
+            <div class="middle">
+
+                <button id="left">◀</button>
+
+                <button id="right">▶</button>
+
+            </div>
+
+            <button id="backward">▼</button>
+
+        </div>
+
+        <br>
+
+        <small>
+            Keyboard : ↑ ↓ ← →
+        </small>
 
     </div>
 
-</div>
-
-<script src="app.js"></script>
+    <script src="app.js"></script>
 
 </body>
+
 </html>
