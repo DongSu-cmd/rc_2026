@@ -86,3 +86,16 @@ button:active {
     transform: scale(1.03);
     transition: 0.2s;
 }
+
+#car{
+    position:fixed;
+
+    left:120px;
+    top:120px;
+
+    width:120px;
+
+    transition:all .15s linear;
+
+    z-index:999;
+}

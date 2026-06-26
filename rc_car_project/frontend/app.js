@@ -1,4 +1,4 @@
- const battery = document.getElementById("battery");
+const battery = document.getElementById("battery");
 const distance = document.getElementById("distance");
 
 const forward = document.getElementById("forward");
@@ -6,46 +6,72 @@ const backward = document.getElementById("backward");
 const left = document.getElementById("left");
 const right = document.getElementById("right");
 
-// 화면 갱신
-function updateStatus(data) {
+const car = document.getElementById("car");
+
+let x = 120;
+let y = 120;
+let angle = 0;
+
+function drawCar(){
+    car.style.left = x + "px";
+    car.style.top = y + "px";
+    car.style.transform = `rotate(${angle}deg)`;
+}
+
+function updateStatus(data){
     battery.textContent = data.battery;
     distance.textContent = data.distance;
 }
 
-// 서버 요청
-async function sendCommand(url) {
-    const response = await fetch(url, {
-        method: "POST",
-        cache: "no-store"
+async function sendCommand(url){
+
+    const response = await fetch(url,{
+        method:"POST"
     });
 
     const data = await response.json();
+
     updateStatus(data);
+
+    switch(url){
+
+        case "/api/forward":
+            y -= 20;
+            break;
+
+        case "/api/backward":
+            y += 20;
+            break;
+
+        case "/api/left":
+            angle -= 15;
+            break;
+
+        case "/api/right":
+            angle += 15;
+            break;
+    }
+
+    drawCar();
 }
 
-// 현재 상태 불러오기
-async function loadStatus() {
+async function loadStatus(){
+
     const response = await fetch("/api/status");
+
     const data = await response.json();
+
     updateStatus(data);
 }
 
-// 버튼 이벤트
-forward.addEventListener("click", () => {
-    sendCommand("/api/forward");
-});
+forward.onclick=()=>sendCommand("/api/forward");
 
-backward.addEventListener("click", () => {
-    sendCommand("/api/backward");
-});
+backward.onclick=()=>sendCommand("/api/backward");
 
-left.addEventListener("click", () => {
-    sendCommand("/api/left");
-});
+left.onclick=()=>sendCommand("/api/left");
 
-right.addEventListener("click", () => {
-    sendCommand("/api/right");
-});
+right.onclick=()=>sendCommand("/api/right");
 
-// 프로그램 시작 시 상태 표시
+drawCar();
+
 loadStatus();
