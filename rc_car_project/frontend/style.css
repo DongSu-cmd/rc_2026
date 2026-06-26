@@ -14,7 +14,7 @@
 body {
     margin: 0;
     background: var(--bg);
-    font-family: "Segoe UI", "Malgun Gothic", sans-serif;
+    font-family: "Malgun Gothic", "맑은 고딕", sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
