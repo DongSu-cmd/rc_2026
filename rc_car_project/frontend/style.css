@@ -74,3 +74,15 @@ button:hover {
 button:active {
     transform: scale(0.96);
 }
+
+#car {
+    display: block;
+    width: 180px;
+    margin: 20px auto;
+    user-select: none;
+}
+
+#car:hover {
+    transform: scale(1.03);
+    transition: 0.2s;
+}
