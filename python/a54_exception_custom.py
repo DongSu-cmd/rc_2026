@@ -1,3 +1,5 @@
+import math
+
 class MinusError(Exception):
     def __init__(self, *args):
         message = "음수는 포함안해"
