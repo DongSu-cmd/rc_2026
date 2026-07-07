@@ -177,7 +177,7 @@ class Driving:
             self.speed = Driving.MIN_SPEED
         elif _cat==5:
             global CAN
-            from pop import CAN
+            from rc_2026.autocar.pop import CAN
             self._can=CAN.Car()
 
     def __del__(self):
@@ -279,7 +279,7 @@ class Wheel:
             self.pwm.setFreq(freq)
         elif _cat==5:
             global CAN
-            from pop import CAN
+            from rc_2026.autocar.pop import CAN
             self._can=CAN.Car()
 
         self.centerAngle = 90
@@ -335,7 +335,7 @@ class CameraPod:
             self.tiltCenterAngle = 13
         elif _cat==5:
             global CAN
-            from pop import CAN
+            from rc_2026.autocar.pop import CAN
             self._can=CAN.Car()
             self.panCenterAngle = 0
             self.tiltCenterAngle = 0
@@ -494,7 +494,7 @@ class AutoCar(axis6):
             self.drv = Driving(None, None, None)
 
         if _cat==5:
-            from pop import CAN
+            from rc_2026.autocar.pop import CAN
             self._can=CAN.Car()
 
             def us():
@@ -841,7 +841,7 @@ class SerBot(axis6):
 
         if _cat==4:
             global CAN
-            from pop import CAN
+            from rc_2026.autocar.pop import CAN
             self.omniwheel=CAN.OmniWheel()
             self.drv.whl=self.omniwheel.wheel
 
@@ -1047,7 +1047,7 @@ def get_Control():
 ''' Artificial Intelligence '''
 
 
-from .__init__ import Camera
+from . import Camera
 import traitlets, os, glob, cv2, PIL.Image
 from IPython.display import display
 import numpy as np

@@ -11,6 +11,7 @@ def main():
     
     value2 = [37, 90, 120, 94]
     index2 = ["한여름"]
+
     df2 = pd.DataFrame([value2], index=index2, columns=columns)
 
     #print(df._append(df2))

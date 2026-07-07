@@ -20,10 +20,7 @@ def main():
     print(df.loc[:, "온도":"불쾌지수"])
 
     cond = df["온도"] > 30
-    print(cond, type(df[cond]))
     print(df[cond])
-    print(df.T)
-
 
 if __name__ == "__main__":
-    main()  
+    main()

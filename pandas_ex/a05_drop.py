@@ -12,8 +12,9 @@ def main():
     print(df.drop("초여름", inplace=True))
     print(df.drop("온도", axis=1))
     print(df.drop(columns="강수량"))
+    print(df.drop(index="늦봄"))
 
-    df["한여름"]["불쾌지수"] = np.nan
+    #df["한여름"]["불쾌지수"] = np.nan
     print(df.replace(np.nan, 0))
     print(df)
 

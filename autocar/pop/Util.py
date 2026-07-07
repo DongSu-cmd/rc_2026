@@ -1,4 +1,4 @@
-from .__init__ import __main__
+from . import __main__
 import cv2, ipywidgets as widgets
 from IPython.display import display, clear_output
 import librosa, math, os
