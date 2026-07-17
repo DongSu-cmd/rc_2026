@@ -273,7 +273,7 @@ class Wheel:
     MIN_VECTOR  = 2.5
     WITH_VECTOR = 10    # 12.5% - 2.5%
 
-    def __init__(self, bus, addr, freq):
+    def __init__(self, bus, addr, freq ):
         if _cat==0 or _cat==1 or _cat==3 or _cat==6:
             self.pwm = PWM(bus, addr)
             self.pwm.setFreq(freq)

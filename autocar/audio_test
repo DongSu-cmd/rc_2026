@@ -1,0 +1,26 @@
+from gtts import gTTS 
+import subprocess 
+ 
+text1 = "주행을 시작합니다." 
+filename1 = "ko_start_tts.mp3" 
+ 
+tts = gTTS(text1) 
+tts.save(filename1)
+
+text2 = "주행을 종료합니다." 
+filename2 = "ko_end_tts.mp3" 
+ 
+tts = gTTS(text2) 
+tts.save(filename2)
+
+text3 = "목적지에 도착했습니다." 
+filename3 = "ko_arrived_tts.mp3" 
+ 
+tts = gTTS(text3) 
+tts.save(filename3)
+
+text4 = "계단을 발견했습니다." 
+filename4 = "ko_stair_tts.mp3" 
+ 
+tts = gTTS(text4) 
+tts.save(filename4)

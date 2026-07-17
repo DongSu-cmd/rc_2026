@@ -475,7 +475,9 @@ class CNN(DNN):
 
         self._Y_data=arr
 
-    def __init__(self, input_size=[28,28], input_level=1, kernel_size=[3,3], kernel_count=32, strides=[1,1], hidden_size=128, output_size=1, conv_level=2, layer_level=1, restore=False, ckpt_name=ckpt_name, softmax=True):
+    def __init__(self, input_size=[28,28], input_level=1, kernel_size=[3,3], kernel_count=32, strides=[1,1],
+                  hidden_size=128, output_size=1, conv_level=2, layer_level=1,
+                    restore=False, ckpt_name=ckpt_name, softmax=True):
         self.ckpt_name = ckpt_name
 
         self._ipsize=input_size
@@ -502,8 +504,9 @@ class CNN(DNN):
             self.model.add(layers.Input(shape=input_shape))
             
             for _ in range(conv_level):
-                self.model.add(layers.Conv2D(filters=kernel_count, kernel_size=kernel_size, strides=strides, padding='SAME'))
-                self.model.add(layers.MaxPool2D([2,2], [2,2], padding='SAME'))
+                self.model.add(layers.Conv2D(filters=kernel_count, kernel_size=kernel_size, 
+                                             strides=strides, padding='SAME'))
+                self.model.add(layers.MaxPool2D([2,2], [2,2], padding='SAME')) #맥스폴
                 self.model.add(layers.Dropout(0.5))
 
             self.model.add(layers.Flatten())
@@ -511,7 +514,7 @@ class CNN(DNN):
             for _ in range(layer_level):
                 self.model.add(layers.Dense(hidden_size))
                 self.model.add(layers.Dropout(0.3))
-
+                #relu
             if self.softmax :
                 if output_size > 1 :
                     self.model.add(layers.Dense(output_size, activation='softmax'))

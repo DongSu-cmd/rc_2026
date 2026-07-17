@@ -1,4 +1,5 @@
 from threading import Thread, Lock
+
 from smbus import * 
 from spidev import * 
 from bme680 import *
@@ -19,7 +20,7 @@ import __main__
 import board
 from neopixel_spi import NeoPixel_SPI
 
-__main__._camera_flip_method = '0'
+__main__._camera_flip_method = '0B'
 
 import wave
 import pyaudio

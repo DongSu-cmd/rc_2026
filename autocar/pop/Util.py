@@ -97,7 +97,6 @@ def one_hot(num, maxlen):
 
 def gstrmer(width=640, height=480, fps=30, flip=0):
     capture_width=width
-    capture_height=height
     display_width=width
     display_height=height
     framerate=fps
